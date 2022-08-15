@@ -31,6 +31,7 @@ class TestDirectorService:
 
     def test_get_all(self):
         assert len(self.director_service.get_all()) > 0
+        assert isinstance(self.director_service.get_all(), list)
 
     def test_get_create(self):
         assert self.director_service.create({"id": 3, "name": "director_3"}).id == 3
